@@ -1,0 +1,5 @@
+# VCS-generated build artifacts
+csrc/
+simv.daidir/
+simv.vdb/
+verdiLog/
