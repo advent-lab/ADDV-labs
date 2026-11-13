@@ -21,8 +21,8 @@ class serialalu_driver extends uvm_driver#(serialalu_transaction);
 	virtual task drive();
 		serialalu_transaction sa_tx;
 		integer counter = 0, state = 0;
-		vif.sig_ina = 0'b0;
-		vif.sig_inb = 0'b0;
+		vif.sig_ina = 1'b0;
+		vif.sig_inb = 1'b0;
 		vif.sig_en_i = 1'b0;
 
 		forever begin

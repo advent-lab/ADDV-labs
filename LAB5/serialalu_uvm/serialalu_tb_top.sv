@@ -21,6 +21,7 @@ module serialalu_tb_top;
 		//blocks can use it
 		uvm_resource_db#(virtual serialalu_if)::set
 			(.scope("ifs"), .name("serialalu_if"), .val(vif));
+		uvm_config_db#(int)::set(null, "*", "recording_detail", UVM_FULL);
 
 		//Executes the test
 		run_test();
@@ -36,7 +37,8 @@ module serialalu_tb_top;
 		#5 vif.sig_clock = ~vif.sig_clock;
 
 	initial begin
-		$fsdbDumpvars;
+		$fsdbDumpfile("novas.fsdb");
+		$fsdbDumpvars(0, serialalu_tb_top);
 	end
 
 endmodule
