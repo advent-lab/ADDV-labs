@@ -29,4 +29,4 @@ gui:
 	$(SIMV) -gui=verdi
 
 clean:
-	rm -rf *.vdb csrc DVEfiles *.vpd *.fsdb simv simv.daidir ucli.key vc_hdrs.h vcs.log 
+	rm -rf *.vdb csrc DVEfiles *.vpd *.fsdb simv simv.daidir ucli.key vc_hdrs.h *.log verdiLog
