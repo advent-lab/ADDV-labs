@@ -29,7 +29,8 @@ class serialalu_sequence extends uvm_sequence#(serialalu_transaction);
 
 		start_item(sa_tx);
 		assert(sa_tx.randomize());
-		//`uvm_info("sa_sequence", sa_tx.sprint(), UVM_LOW);
+		`uvm_info("sa_sequence", $sformatf("Transaction: ina=%0b inb=%0b", sa_tx.ina, sa_tx.inb), UVM_MEDIUM)
+		`uvm_info("sa_sequence", sa_tx.sprint(), UVM_HIGH)
 		finish_item(sa_tx);
 		end
 	endtask: body

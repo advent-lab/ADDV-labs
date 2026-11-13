@@ -12,6 +12,11 @@ class serialalu_test extends uvm_test;
 			sa_env = serialalu_env::type_id::create(.name("sa_env"), .parent(this));
 		endfunction: build_phase
 
+		function void end_of_elaboration_phase(uvm_phase phase);
+			super.end_of_elaboration_phase(phase);
+			uvm_top.print_topology();
+		endfunction: end_of_elaboration_phase
+
 		task run_phase(uvm_phase phase);
 			serialalu_sequence sa_seq;
 
